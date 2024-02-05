@@ -28,9 +28,14 @@ public class Seau {
 
     public void transvaserVers(Seau destination){
         if ((!this.estVide()) && (!destination.estPlein())){
-           // while()
-            // TODO: 29/01/2024 à terminer
-
+            if(this.quantiteActuelle <= destination.quantiteATransvaser()){
+                destination.setQuantiteActuelle(destination.getQuantiteActuelle()+this.quantiteActuelle);
+                this.vider();
+            }
+            else{
+                this.setQuantiteActuelle(this.getQuantiteActuelle() - destination.quantiteATransvaser());
+                destination.remplir();
+            }
         }
     }
 
@@ -45,5 +50,9 @@ public class Seau {
 
     public void setQuantiteActuelle(int quantiteActuelle) {
         this.quantiteActuelle = quantiteActuelle;
+    }
+
+    public int quantiteATransvaser(){
+        return contenance - quantiteActuelle;
     }
 }
