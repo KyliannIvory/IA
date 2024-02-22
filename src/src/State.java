@@ -8,9 +8,9 @@ public class State {
     private List<Bucket> bucketList;
     private int heuristicValue;
     private List<Integer> stateContent;
-    private int numberOfFullBuckets;
-    private int numberOfEmptyBuckets;
-    private int numberOfIntermediateBuckets;
+    private int nbOfEmptyBucket = 0;
+    private int nbOfFullBucket = 0;
+    private int nbOfIntermediateBucket = 0 ;
 
 
     public State(int numberOfBuckets){
@@ -21,11 +21,11 @@ public class State {
 
     public State(State stateToCopy) {
         this.sizeMax = stateToCopy.sizeMax;
-        this.bucketList = new ArrayList<>(stateToCopy.bucketList);
+        this.bucketList = new ArrayList<>();
+        for(Bucket bucket : stateToCopy.bucketList){
+            this.bucketList.add(new Bucket(bucket));
+        }
         this.stateContent = new ArrayList<>(stateToCopy.stateContent);
-        this.numberOfEmptyBuckets = stateToCopy.numberOfEmptyBuckets;
-        this.numberOfFullBuckets = stateToCopy.numberOfFullBuckets;
-        this.numberOfIntermediateBuckets = stateToCopy.numberOfIntermediateBuckets;
     }
 
     public void addBucket(Bucket bucket){
@@ -46,14 +46,12 @@ public class State {
     public List<Bucket> getBucketList() {
         return bucketList;
     }
-    public void setBucketList(List<Bucket> bucketList) {
-        this.bucketList = bucketList;
-    }
 
 
     public int getHeuristicValue() {
         return heuristicValue;
     }
+
     public void setHeuristicValue(int heuristicValue) {
         this.heuristicValue = heuristicValue;
     }
@@ -62,33 +60,37 @@ public class State {
     public List<Integer> getStateContent() {
         return stateContent;
     }
-    public void setStateContent(List<Integer> stateContent) {
-        this.stateContent = stateContent;
-    }
 
     public int getNumberOfFullBuckets() {
-        return numberOfFullBuckets;
-    }
-
-    public void setNumberOfFullBuckets(int numberOfFullBuckets) {
-        this.numberOfFullBuckets = numberOfFullBuckets;
+        return nbOfFullBucket;
     }
 
     public int getNumberOfEmptyBuckets() {
-        return numberOfEmptyBuckets;
-    }
-
-    public void setNumberOfEmptyBuckets(int numberOfEmptyBuckets) {
-        this.numberOfEmptyBuckets = numberOfEmptyBuckets;
+        return nbOfEmptyBucket;
     }
 
     public int getNumberOfIntermediateBuckets() {
-        return numberOfIntermediateBuckets;
+        return nbOfIntermediateBucket;
     }
 
-    public void setNumberOfIntermediateBuckets(int numberOfIntermediateBuckets) {
-        this.numberOfIntermediateBuckets = numberOfIntermediateBuckets;
+    // calcule nbOfEmptyBucket , nbOfFullBucket , nbOfIntermediateBucket
+    public void calculateNumbers(){
+
+         nbOfFullBucket = 0;
+        for(Bucket bucket : bucketList){
+            if(bucket.isFull())
+                nbOfFullBucket++;
+        }
+
+         nbOfEmptyBucket = 0;
+        for(Bucket bucket : bucketList){
+            if(bucket.isEmpty())
+                nbOfEmptyBucket++;
+        }
+
+        nbOfIntermediateBucket = sizeMax - nbOfFullBucket - nbOfEmptyBucket;
     }
+
 
     public void print(){
         System.out.println(stateContent);
