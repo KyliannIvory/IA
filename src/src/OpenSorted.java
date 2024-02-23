@@ -38,4 +38,25 @@ public class OpenSorted implements Open {
     public State getFirst() {
         return list.first();
     }
+
+    @Override
+    public void print() {
+        System.out.println(this);
+    }
+
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("(");
+        boolean first = true;
+        for (State state : list) {
+            if (!first) {
+                sb.append(" ; ");
+            }
+            sb.append(state);
+            first = false;
+        }
+        sb.append(")");
+        return sb.toString();
+    }
 }
+

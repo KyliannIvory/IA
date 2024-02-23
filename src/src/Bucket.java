@@ -33,11 +33,11 @@ public class Bucket {
 
     public void transferTo(Bucket destination) {
         if ((!this.isEmpty()) && (!destination.isFull())) {
-            if (this.currentQuantity <= destination.quantityToTransfer()) {
+            if (this.currentQuantity <= destination.remaingCapacity()) {
                 destination.setCurrentQuantity(destination.getCurrentQuantity() + this.currentQuantity);
                 this.empty();
             } else {
-                this.setCurrentQuantity(this.getCurrentQuantity() - destination.quantityToTransfer());
+                this.setCurrentQuantity(this.getCurrentQuantity() - destination.remaingCapacity());
                 destination.fill();
             }
         }
@@ -55,7 +55,7 @@ public class Bucket {
         this.currentQuantity = currentQuantity;
     }
 
-    public int quantityToTransfer() {
+    public int remaingCapacity() {
         return capacity - currentQuantity;
     }
 }

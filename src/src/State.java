@@ -8,9 +8,9 @@ public class State {
     private List<Bucket> bucketList;
     private int heuristicValue;
     private List<Integer> stateContent;
-    private int nbOfEmptyBucket = 0;
-    private int nbOfFullBucket = 0;
-    private int nbOfIntermediateBucket = 0 ;
+    /*private  int nbOfEmptyBucket ;
+    private int nbOfFullBucket ;
+    private int nbOfIntermediateBucket ;*/
 
 
     public State(int numberOfBuckets){
@@ -22,7 +22,7 @@ public class State {
     public State(State stateToCopy) {
         this.sizeMax = stateToCopy.sizeMax;
         this.bucketList = new ArrayList<>();
-        for(Bucket bucket : stateToCopy.bucketList){
+        for(Bucket bucket : stateToCopy.bucketList) {
             this.bucketList.add(new Bucket(bucket));
         }
         this.stateContent = new ArrayList<>(stateToCopy.stateContent);
@@ -61,7 +61,12 @@ public class State {
         return stateContent;
     }
 
-    public int getNumberOfFullBuckets() {
+   /* public int getNumberOfFullBuckets() {
+        int nbOfFullBucket = 0;
+        for(Bucket bucket : bucketList){
+            if(bucket.isFull())
+                nbOfFullBucket++;
+        }
         return nbOfFullBucket;
     }
 
@@ -74,26 +79,25 @@ public class State {
     }
 
     // calcule nbOfEmptyBucket , nbOfFullBucket , nbOfIntermediateBucket
-    public void calculateNumbers(){
+    public void calculateNumbers() {
+        nbOfFullBucket = 0;
+        nbOfEmptyBucket = 0;
 
-         nbOfFullBucket = 0;
-        for(Bucket bucket : bucketList){
-            if(bucket.isFull())
+        for (Bucket bucket : bucketList) {
+            if (bucket.isFull()) {
                 nbOfFullBucket++;
-        }
-
-         nbOfEmptyBucket = 0;
-        for(Bucket bucket : bucketList){
-            if(bucket.isEmpty())
+            } else if (bucket.isEmpty()) {
                 nbOfEmptyBucket++;
+            }
         }
 
         nbOfIntermediateBucket = sizeMax - nbOfFullBucket - nbOfEmptyBucket;
-    }
+    }*/
 
 
-    public void print(){
-        System.out.println(stateContent);
+
+    public String toString(){
+        return stateContent.toString();
     }
 
     @Override

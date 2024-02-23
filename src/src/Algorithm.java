@@ -17,10 +17,11 @@ public class Algorithm {
         StateGenerator generator = new StateGenerator(new Controller());
         State current;
         open.add(initialState);
-        while ((!open.isEmpty()) && (open.getFirst() != finalState)) {
+        while ((!open.isEmpty()) && (!open.getFirst().equals(finalState))) {
             current = open.remove();
             closed.add(current);
-            generator.generateState(current,open,closed);
+            generator.generateState(current ,open ,closed);
+            open.print();
         }
         if(open.isEmpty())
             System.out.println("il n'existe pas de but accessible");

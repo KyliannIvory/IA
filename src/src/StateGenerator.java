@@ -3,17 +3,21 @@ import java.util.List;
 public class StateGenerator {
 
     private Controller controller ;
+     private NumberManager numberManager;
+
 
 
     public StateGenerator(Controller controller){
         this.controller = controller;
+        this.numberManager = new NumberManager();
     }
 
     public void generateState(State currentState, Open open , Close close){
 
-        int nbOfEmpty = currentState.getNumberOfEmptyBuckets();
-        int nbOfFull = currentState.getNumberOfFullBuckets();
-        int nbOfInter = currentState.getNumberOfIntermediateBuckets();
+        numberManager.findNumber(currentState);
+        int nbOfEmpty = numberManager.getNbOfEmpty(currentState);
+        int nbOfFull = numberManager.getNbOfFull(currentState);
+        int nbOfInter = numberManager.getNbOfIntermediate(currentState);
         int sizeMax = currentState.getSizeMax();
 
         if(controller.ableToEmpty(nbOfFull,nbOfInter))
@@ -26,19 +30,21 @@ public class StateGenerator {
             generateByTransferring(currentState, open , close);
     }
 
-    private void generateByEmptying(State currentState, Open open, Close close) {
+    public void generateByEmptying(State currentState, Open open, Close close) {
 
-        int nbOfFull = currentState.getNumberOfFullBuckets();
-        int nbOfInter = currentState.getNumberOfIntermediateBuckets();
+        int nbOfFull = numberManager.getNbOfFull(currentState);
+        int nbOfInter = numberManager.getNbOfIntermediate(currentState);
 
         for (int i = 0; i < currentState.getSizeMax(); i++) {
             Bucket currentBucket = currentState.getBucketList().get(i);
+
             if (!currentBucket.isEmpty()) {
                 State newState = new State(currentState);
                 newState.getBucketList().get(i).empty();
                 newState.getStateContent().set(i,0);
+
                 if(!close.contains(newState) && !open.contains(newState)){
-                    newState.calculateNumbers();
+                    numberManager.findNumber(newState);
                     open.add(newState);
                 }
 
@@ -56,19 +62,21 @@ public class StateGenerator {
     }
 
 
-    private void generateByFilling(State currentState, Open open , Close close) {
+    public void generateByFilling(State currentState, Open open , Close close) {
 
-        int nbOfEmpty = currentState.getNumberOfEmptyBuckets();
-        int nbOfInter = currentState.getNumberOfIntermediateBuckets();
+        int nbOfEmpty = numberManager.getNbOfEmpty(currentState);
+        int nbOfInter = numberManager.getNbOfIntermediate(currentState);
 
         for(int i = 0 ; i < currentState.getSizeMax() ; i++){
             Bucket currentBucket = currentState.getBucketList().get(i);
+
             if(!currentBucket.isFull()){
                 State newState = new State(currentState);
                 newState.getBucketList().get(i).fill();
                 newState.getStateContent().set(i, newState.getBucketList().get(i).getCapacity());
+
                 if(!close.contains(newState) && !open.contains(newState)){
-                    newState.calculateNumbers();
+                    numberManager.findNumber(newState);
                     open.add(newState);
                 }
 
@@ -84,7 +92,7 @@ public class StateGenerator {
         }
     }
 
-    private void generateByTransferring(State currentState, Open open, Close close){
+    public void generateByTransferring(State currentState, Open open, Close close){
 
         Bucket bucket_i ;
         Bucket bucket_j ;
@@ -99,7 +107,7 @@ public class StateGenerator {
                 stateOne.getStateContent().set(i,bucket_i.getCurrentQuantity());
                 stateOne.getStateContent().set(j,bucket_j.getCurrentQuantity());
                 if(!close.contains(stateOne) && !open.contains(stateOne)){
-                    stateOne.calculateNumbers();
+                    numberManager.findNumber(stateOne);
                     open.add(stateOne);
                 }
 
@@ -110,7 +118,7 @@ public class StateGenerator {
                 stateTwo.getStateContent().set(i,bucket_i.getCurrentQuantity());
                 stateTwo.getStateContent().set(j,bucket_j.getCurrentQuantity());
                 if(!close.contains(stateTwo) && !open.contains(stateTwo)){
-                    stateTwo.calculateNumbers();
+                    numberManager.findNumber(stateTwo);
                     open.add(stateTwo);
                 }
             }

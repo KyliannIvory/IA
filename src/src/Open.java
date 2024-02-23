@@ -5,5 +5,6 @@ public interface Open {
     State remove();
     boolean isEmpty();
     State getFirst();
+    void print();
 
 }
