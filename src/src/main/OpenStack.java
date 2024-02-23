@@ -1,17 +1,18 @@
-import java.util.ArrayList;
+package main;
+import java.util.LinkedList;
 
-public class OpenQueue implements Open {
+public class OpenStack implements Open {
 
-    private ArrayList<State> list;
+    private LinkedList<State> list;
 
-    public OpenQueue() {
-        list = new ArrayList<>();
+    public OpenStack() {
+        list = new LinkedList<>();
     }
 
     @Override
     public void add(State state) {
         if(!list.contains(state))
-            list.add(state);
+            list.addFirst(state);
     }
 
     @Override
@@ -25,7 +26,7 @@ public class OpenQueue implements Open {
 
     @Override
     public State remove() {
-        return list.remove(0);
+        return list.removeFirst();
     }
 
     @Override
@@ -35,7 +36,7 @@ public class OpenQueue implements Open {
 
     @Override
     public State getFirst() {
-        return list.get(0);
+        return list.peek();
     }
 
     @Override

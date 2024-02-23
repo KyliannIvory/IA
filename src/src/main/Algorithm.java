@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
-
+package main;
 public class Algorithm {
 
     private Close closed;

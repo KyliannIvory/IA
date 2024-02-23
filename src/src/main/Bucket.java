@@ -1,3 +1,4 @@
+package main;
 public class Bucket {
 
     private final int capacity;
@@ -5,6 +6,8 @@ public class Bucket {
 
     public Bucket(int capacity, int currentQuantity) {
         this.capacity = capacity;
+        if(currentQuantity > capacity)
+            currentQuantity = capacity;
         this.currentQuantity = currentQuantity;
     }
 

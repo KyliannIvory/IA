@@ -1,4 +1,5 @@
-import java.util.List;
+package main;
+
 
 public class StateGenerator {
 

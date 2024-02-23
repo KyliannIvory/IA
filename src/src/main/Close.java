@@ -1,5 +1,5 @@
+package main;
 import java.util.ArrayList;
-
 public class Close {
 
     private ArrayList<State> list;

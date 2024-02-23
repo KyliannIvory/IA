@@ -1,3 +1,4 @@
+package main;
 public interface Open {
 
     void add(State state);

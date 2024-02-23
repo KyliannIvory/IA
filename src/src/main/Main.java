@@ -1,13 +1,12 @@
+package main;
+
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
-        File file = new File("src/src/instance.txt");
+        File file = new File("src/src/main/instance.txt");
         Scanner scanner = new Scanner(file);
         int nbOfBucket = scanner.nextInt();
         State initialState = new State(nbOfBucket);

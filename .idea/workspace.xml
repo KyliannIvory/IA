@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2b5ca7cc-4627-4f6b-97e2-7754634ad1d1" name="Changes" comment="quelque mise à jour mais il faut ensuite ecrire les tests parce que le programme e fonctionne pas tres bien...">
+      <change afterPath="$PROJECT_DIR$/src/src/tests/TestBucket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/Algorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/main/Algorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/Main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2bdLQsKiyv8FSnfQ0uTLV2UkEPa" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.Main.executor": "Run",
+    "Application.StateGenerator.executor": "Run",
+    "Application.main.Main.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.All in src.executor": "Run",
+    "JUnit.TestBucket.executor": "Run",
+    "JUnit.TestBucket.isEmpty.executor": "Run",
+    "JUnit.TestBucket.testEmpty.executor": "Run",
+    "JUnit.TestBucket.testFill.executor": "Run",
+    "JUnit.TestBucket.testIsFull.executor": "Run",
+    "JUnit.TestController.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "create.test.in.the.same.root": "true",
+    "git-widget-placeholder": "main",
+    "jdk.selected.JAVA_MODULE": "19",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="main" />
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.TestController">
+    <configuration name="TestBucket" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="src" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.TestBucket" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestBucket.testEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="src" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.TestBucket" />
+      <option name="METHOD_NAME" value="testEmpty" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestBucket.testFill" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="src" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.TestBucket" />
+      <option name="METHOD_NAME" value="testFill" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestController" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="src" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.TestController" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestController.testAbleToFill" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="src" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.TestController" />
+      <option name="METHOD_NAME" value="testAbleToFill" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TestController" />
+        <item itemvalue="JUnit.TestController.testAbleToFill" />
+        <item itemvalue="JUnit.TestBucket" />
+        <item itemvalue="JUnit.TestBucket.testEmpty" />
+        <item itemvalue="JUnit.TestBucket.testFill" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-19.0.2-corretto-19.0.2-4caba194b151-be841094" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2b5ca7cc-4627-4f6b-97e2-7754634ad1d1" name="Changes" comment="" />
+      <created>1706539995984</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1706539995984</updated>
+    </task>
+    <task id="LOCAL-00001" summary="premier commit">
+      <created>1706543887823</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1706543887823</updated>
+    </task>
+    <task id="LOCAL-00002" summary="transvaser terminé">
+      <created>1707144207456</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1707144207456</updated>
+    </task>
+    <task id="LOCAL-00003" summary="code en anglais maintenant et avancement dans les classes Controller et StateGenerator">
+      <option name="closed" value="true" />
+      <created>1708556425095</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1708556425095</updated>
+    </task>
+    <task id="LOCAL-00004" summary="je pense avoir finis la premiere partie sur l'algo mais à analyser encore...">
+      <option name="closed" value="true" />
+      <created>1708621131123</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1708621131123</updated>
+    </task>
+    <task id="LOCAL-00005" summary="quelque mise à jour mais il faut ensuite ecrire les tests parce que le programme e fonctionne pas tres bien...">
+      <option name="closed" value="true" />
+      <created>1708706385838</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1708706385838</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="premier commit" />
+    <MESSAGE value="transvaser terminé" />
+    <MESSAGE value="code en anglais maintenant et avancement dans les classes Controller et StateGenerator" />
+    <MESSAGE value="je pense avoir finis la premiere partie sur l'algo mais à analyser encore..." />
+    <MESSAGE value="quelque mise à jour mais il faut ensuite ecrire les tests parce que le programme e fonctionne pas tres bien..." />
+    <option name="LAST_COMMIT_MESSAGE" value="quelque mise à jour mais il faut ensuite ecrire les tests parce que le programme e fonctionne pas tres bien..." />
+  </component>
+</project>
