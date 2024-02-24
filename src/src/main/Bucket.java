@@ -1,8 +1,13 @@
 package main;
-public class Bucket {
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Bucket implements Observable {
 
     private final int capacity;
     private int currentQuantity;
+    private ArrayList<Observer> observerList = new ArrayList<>();
 
     public Bucket(int capacity, int currentQuantity) {
         this.capacity = capacity;
@@ -27,11 +32,13 @@ public class Bucket {
     public void fill() {
         if (!isFull())
             setCurrentQuantity(capacity);
+        notifyAllObserver();
     }
 
     public void empty() {
         if (!isEmpty())
             setCurrentQuantity(0);
+        notifyAllObserver();
     }
 
     public void transferTo(Bucket destination) {
@@ -44,6 +51,8 @@ public class Bucket {
                 destination.fill();
             }
         }
+        notifyAllObserver();
+        destination.notifyAllObserver();
     }
 
     public int getCapacity() {
@@ -61,4 +70,16 @@ public class Bucket {
     public int remaingCapacity() {
         return capacity - currentQuantity;
     }
+
+    @Override
+    public void addObserver(Observer observer) {
+        observerList.add(observer);
+    }
+
+    @Override
+    public void notifyAllObserver() {
+        for(Observer observer : observerList)
+            observer.updateStateContent(this);
+    }
+
 }

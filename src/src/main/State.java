@@ -3,16 +3,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class State {
+public class State implements Observer{
 
     private int sizeMax;
     private List<Bucket> bucketList;
     private int heuristicValue;
     private List<Integer> stateContent;
-    /*private  int nbOfEmptyBucket ;
-    private int nbOfFullBucket ;
-    private int nbOfIntermediateBucket ;*/
-
 
     public State(int numberOfBuckets){
         this.sizeMax = numberOfBuckets;
@@ -24,13 +20,16 @@ public class State {
         this.sizeMax = stateToCopy.sizeMax;
         this.bucketList = new ArrayList<>();
         for(Bucket bucket : stateToCopy.bucketList) {
-            this.bucketList.add(new Bucket(bucket));
+            Bucket bucket1 = new Bucket(bucket);
+            bucket1.addObserver(this);
+            this.bucketList.add(bucket1);
         }
         this.stateContent = new ArrayList<>(stateToCopy.stateContent);
     }
 
     public void addBucket(Bucket bucket){
         if(bucketList.size() < sizeMax){
+            bucket.addObserver(this);
             bucketList.add(bucket);
             stateContent.add(bucket.getCurrentQuantity());
         }
@@ -57,45 +56,9 @@ public class State {
         this.heuristicValue = heuristicValue;
     }
 
-
     public List<Integer> getStateContent() {
         return stateContent;
     }
-
-   /* public int getNumberOfFullBuckets() {
-        int nbOfFullBucket = 0;
-        for(Bucket bucket : bucketList){
-            if(bucket.isFull())
-                nbOfFullBucket++;
-        }
-        return nbOfFullBucket;
-    }
-
-    public int getNumberOfEmptyBuckets() {
-        return nbOfEmptyBucket;
-    }
-
-    public int getNumberOfIntermediateBuckets() {
-        return nbOfIntermediateBucket;
-    }
-
-    // calcule nbOfEmptyBucket , nbOfFullBucket , nbOfIntermediateBucket
-    public void calculateNumbers() {
-        nbOfFullBucket = 0;
-        nbOfEmptyBucket = 0;
-
-        for (Bucket bucket : bucketList) {
-            if (bucket.isFull()) {
-                nbOfFullBucket++;
-            } else if (bucket.isEmpty()) {
-                nbOfEmptyBucket++;
-            }
-        }
-
-        nbOfIntermediateBucket = sizeMax - nbOfFullBucket - nbOfEmptyBucket;
-    }*/
-
-
 
     public String toString(){
         return stateContent.toString();
@@ -106,12 +69,26 @@ public class State {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         State state = (State) o;
-        return sizeMax == state.sizeMax && Objects.equals(stateContent, state.stateContent);
+        if (sizeMax != state.sizeMax) return false; // Vérifier si sizeMax est différent
+        if (stateContent.size() != state.stateContent.size()) return false; // Vérifier si les listes ont la même taille
+        for (int i = 0; i < stateContent.size(); i++) {
+            if (!stateContent.get(i).equals(state.stateContent.get(i))) { // Vérifier chaque élément de stateContent
+                return false;
+            }
+        }
+        return true;
     }
 
-    @Override
+   /* @Override
     public int hashCode() {
         return Objects.hash(sizeMax, stateContent);
+    }*/
+
+    @Override
+    public void updateStateContent(Bucket bucket) {
+         int index = bucketList.indexOf(bucket);
+         stateContent.set(index,bucket.getCurrentQuantity());
+
     }
 }
 
