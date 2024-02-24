@@ -79,11 +79,6 @@ public class State implements Observer{
         }
         return true;
     }
-
-    public State getPreviousState() {
-        return previousState;
-    }
-
     public void setPreviousState(State previousState) {
         this.previousState = previousState;
     }
@@ -99,9 +94,6 @@ public class State implements Observer{
         drawBranch();
         System.out.println("VOILÀ :)");
     }
-
-
-
 
     public void drawBranch() {
         if (previousState == null) {
