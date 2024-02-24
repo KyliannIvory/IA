@@ -45,9 +45,9 @@ public class TestState {
         State state1 = new State(state);
         state1.getBucketList().get(0).empty();
         state1.getBucketList().get(1).fill();
-        assertNotEquals(state.getStateContent().get(0),state1.getStateContent().get(0));
-        assertNotEquals(state.getStateContent().get(1),state1.getStateContent().get(1));
+        assertNotEquals( state.getStateContent().get(0), state1.getStateContent().get(0) );
+        assertNotEquals( state.getStateContent().get(1), state1.getStateContent().get(1) );
         state1.getBucketList().get(1).empty();
-        assertEquals(state.getStateContent().get(1),state1.getStateContent().get(1));
+        assertEquals( state.getStateContent().get(1), state1.getStateContent().get(1) );
     }
 }

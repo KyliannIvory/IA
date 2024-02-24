@@ -24,10 +24,10 @@ public class StateGenerator {
         if(controller.ableToEmpty(nbOfFull,nbOfInter))
             generateByEmptying(currentState, open, close);
 
-        else if (controller.ableToFill(nbOfEmpty,nbOfInter))
+        if (controller.ableToFill(nbOfEmpty,nbOfInter))
             generateByFilling(currentState, open , close);
 
-        else if (controller.ableToTransfer(nbOfEmpty,nbOfFull,sizeMax))
+        if (controller.ableToTransfer(nbOfEmpty,nbOfFull,sizeMax))
             generateByTransferring(currentState, open , close);
     }
 
@@ -46,6 +46,7 @@ public class StateGenerator {
 
                 if(!close.contains(newState) && !open.contains(newState)){
                     numberManager.findNumber(newState);
+                    newState.setPreviousState(currentState);
                     open.add(newState);
                 }
 
@@ -78,6 +79,7 @@ public class StateGenerator {
 
                 if(!close.contains(newState) && !open.contains(newState)){
                     numberManager.findNumber(newState);
+                    newState.setPreviousState(currentState);
                     open.add(newState);
                 }
 
@@ -109,6 +111,7 @@ public class StateGenerator {
                 stateOne.getStateContent().set(j,bucket_j.getCurrentQuantity());
                 if(!close.contains(stateOne) && !open.contains(stateOne)){
                     numberManager.findNumber(stateOne);
+                    stateOne.setPreviousState(currentState);
                     open.add(stateOne);
                 }
 
@@ -120,6 +123,7 @@ public class StateGenerator {
                 stateTwo.getStateContent().set(j,bucket_j.getCurrentQuantity());
                 if(!close.contains(stateTwo) && !open.contains(stateTwo)){
                     numberManager.findNumber(stateTwo);
+                    stateTwo.setPreviousState(currentState);
                     open.add(stateTwo);
                 }
             }

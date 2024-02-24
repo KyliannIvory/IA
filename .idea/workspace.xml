@@ -4,12 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b5ca7cc-4627-4f6b-97e2-7754634ad1d1" name="Changes" comment="test commencé">
-      <change afterPath="$PROJECT_DIR$/src/src/main/Observable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/Observer.java" afterDir="false" />
+    <list default="true" id="2b5ca7cc-4627-4f6b-97e2-7754634ad1d1" name="Changes" comment="utilisation du design Observer pour mettre à jour les valeur de StateContent et ecriture de la classe TestState">
+      <change afterPath="$PROJECT_DIR$/src/src/tests/TestStateGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/main/Bucket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/main/Bucket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/main/Bucket.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/src/main/Bucket.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/main/State.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/src/main/State.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/tests/TestNumberManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/src/tests/TestNumberManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/tests/TestState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/src/tests/TestState.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/main/Algorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/main/Algorithm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/src/main/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/main/State.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/main/StateGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/main/StateGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/main/instance.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/main/instance.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/src/tests/TestNumberManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/tests/TestNumberManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/src/tests/TestState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/tests/TestState.java" afterDir="false" />
     </list>
@@ -22,8 +27,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -63,9 +68,12 @@
     "JUnit.TestBucket.testIsFull.executor": "Run",
     "JUnit.TestController.executor": "Run",
     "JUnit.TestController.testAbleToFill.executor": "Run",
+    "JUnit.TestNumberManager.testFindNumber.executor": "Run",
     "JUnit.TestState.TestCopyConstructorState.executor": "Run",
     "JUnit.TestState.executor": "Run",
     "JUnit.TestState.testEquals.executor": "Run",
+    "JUnit.TestStateGenerator.testGenerateByEmptying.executor": "Run",
+    "JUnit.TestStateGenerator.testGenerateState.executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
@@ -88,35 +96,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestState">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main.Main" />
-      <module name="src" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="main.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestBucket" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="src" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.TestBucket" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="TestController" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="src" />
       <extension name="coverage">
@@ -132,7 +112,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestState" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestNumberManager.testFindNumber" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="src" />
       <extension name="coverage">
         <pattern>
@@ -141,13 +121,46 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.TestState" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="tests.TestNumberManager" />
+      <option name="METHOD_NAME" value="testFindNumber" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestState.testEquals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestStateGenerator.testGenerateByEmptying" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="src" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.TestStateGenerator" />
+      <option name="METHOD_NAME" value="testGenerateByEmptying" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestStateGenerator.testGenerateState" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="src" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.TestStateGenerator" />
+      <option name="METHOD_NAME" value="testGenerateState" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestState.TestCopyConstructorState" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="src" />
       <extension name="coverage">
         <pattern>
@@ -157,7 +170,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.TestState" />
-      <option name="METHOD_NAME" value="testEquals" />
+      <option name="METHOD_NAME" value="TestCopyConstructorState" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -165,11 +178,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestState" />
+        <item itemvalue="JUnit.TestStateGenerator.testGenerateState" />
+        <item itemvalue="JUnit.TestStateGenerator.testGenerateByEmptying" />
+        <item itemvalue="JUnit.TestState.TestCopyConstructorState" />
+        <item itemvalue="JUnit.TestNumberManager.testFindNumber" />
         <item itemvalue="JUnit.TestController" />
-        <item itemvalue="JUnit.TestBucket" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.TestState.testEquals" />
       </list>
     </recent_temporary>
   </component>
@@ -235,7 +248,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708730498285</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="utilisation du design Observer pour mettre à jour les valeur de StateContent et ecriture de la classe TestState">
+      <option name="closed" value="true" />
+      <created>1708766982800</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1708766982800</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -246,6 +267,7 @@
     <MESSAGE value="je pense avoir finis la premiere partie sur l'algo mais à analyser encore..." />
     <MESSAGE value="quelque mise à jour mais il faut ensuite ecrire les tests parce que le programme e fonctionne pas tres bien..." />
     <MESSAGE value="test commencé" />
-    <option name="LAST_COMMIT_MESSAGE" value="test commencé" />
+    <MESSAGE value="utilisation du design Observer pour mettre à jour les valeur de StateContent et ecriture de la classe TestState" />
+    <option name="LAST_COMMIT_MESSAGE" value="utilisation du design Observer pour mettre à jour les valeur de StateContent et ecriture de la classe TestState" />
   </component>
 </project>

@@ -9,6 +9,7 @@ public class State implements Observer{
     private List<Bucket> bucketList;
     private int heuristicValue;
     private List<Integer> stateContent;
+    private State previousState = null;
 
     public State(int numberOfBuckets){
         this.sizeMax = numberOfBuckets;
@@ -79,10 +80,13 @@ public class State implements Observer{
         return true;
     }
 
-   /* @Override
-    public int hashCode() {
-        return Objects.hash(sizeMax, stateContent);
-    }*/
+    public State getPreviousState() {
+        return previousState;
+    }
+
+    public void setPreviousState(State previousState) {
+        this.previousState = previousState;
+    }
 
     @Override
     public void updateStateContent(Bucket bucket) {
@@ -90,6 +94,27 @@ public class State implements Observer{
          stateContent.set(index,bucket.getCurrentQuantity());
 
     }
+
+    public void showSolution() {
+        drawBranch();
+        System.out.println("VOILÀ :)");
+    }
+
+
+
+
+    public void drawBranch() {
+        if (previousState == null) {
+            System.out.println("On commence ici");
+            System.out.println();
+            return;
+        }
+        previousState.drawBranch();
+        System.out.println(this);
+        System.out.println("  |");
+        System.out.println("  v");
+    }
+
 }
 
 
