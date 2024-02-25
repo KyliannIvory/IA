@@ -41,7 +41,8 @@ public class OpenQueue implements Open {
 
     @Override
     public void print() {
-        System.out.println(this);
+        System.out.println(this + "\n" + "\n");
+
     }
 
     public String toString() {

@@ -19,6 +19,7 @@ public class Algorithm {
             current = open.remove();
             closed.add(current);
             generator.generateState(current ,open ,closed);
+            open.print();
         }
         if(open.isEmpty())
             System.out.println("il n'existe pas de but accessible");
