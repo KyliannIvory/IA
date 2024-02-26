@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b5ca7cc-4627-4f6b-97e2-7754634ad1d1" name="Changes" comment="Juste une maj pour la methode de l'interface Heuristic.java">
+    <list default="true" id="2b5ca7cc-4627-4f6b-97e2-7754634ad1d1" name="Changes" comment="test">
+      <change afterPath="$PROJECT_DIR$/src/src/main/DifferenceQuantityHeuristic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/src/main/Algorithm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/src/main/Algorithm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/src/main/OpenQueue.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/src/main/OpenQueue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/main/instance.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/main/instance.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +87,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestController">
+  <component name="RunManager">
     <configuration name="TestController" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="src" />
       <extension name="coverage">
@@ -271,7 +271,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708895009012</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="test">
+      <option name="closed" value="true" />
+      <created>1708957858162</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1708957858162</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -286,6 +294,7 @@
     <MESSAGE value="L'algo fonctionne bien ... maintenant il faudrait passer à l'heuristique..." />
     <MESSAGE value="Interface Heuristic créé. Maintenant il faut ecrire des Classe qui vont implementer cette interface et proposer leurs propre heuristique" />
     <MESSAGE value="Juste un maj pour la methode de l'interface Heuristic.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Juste un maj pour la methode de l'interface Heuristic.java" />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
 </project>
