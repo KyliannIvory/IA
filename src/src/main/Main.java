@@ -30,8 +30,8 @@ public class Main {
 
 
 
-        Open open = new OpenQueue();
-        Algorithm algorithm = new Algorithm(finalState,open);
+        Open open = new OpenSorted();
+        Algorithm algorithm = new Algorithm(finalState,open, new FirstHeuristic(finalState));
         algorithm.run(initialState);
 
 

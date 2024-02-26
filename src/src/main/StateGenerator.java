@@ -3,14 +3,17 @@ package main;
 
 public class StateGenerator {
 
-    private Controller controller ;
+     private Controller controller ;
      private NumberManager numberManager;
+     private Heuristic heuristic;
 
 
 
-    public StateGenerator(Controller controller){
+
+    public StateGenerator(Controller controller, Heuristic heuristic){
         this.controller = controller;
         this.numberManager = new NumberManager();
+        this.heuristic = heuristic;
     }
 
     public void generateState(State currentState, Open open , Close close){
@@ -47,6 +50,7 @@ public class StateGenerator {
                 if(!close.contains(newState) && !open.contains(newState)){
                     numberManager.findNumber(newState);
                     newState.setPreviousState(currentState);
+                    heuristic.calculateHeuristic(newState);
                     open.add(newState);
                 }
 
@@ -80,6 +84,7 @@ public class StateGenerator {
                 if(!close.contains(newState) && !open.contains(newState)){
                     numberManager.findNumber(newState);
                     newState.setPreviousState(currentState);
+                    heuristic.calculateHeuristic(newState);
                     open.add(newState);
                 }
 
@@ -112,6 +117,7 @@ public class StateGenerator {
                 if(!close.contains(stateOne) && !open.contains(stateOne)){
                     numberManager.findNumber(stateOne);
                     stateOne.setPreviousState(currentState);
+                    heuristic.calculateHeuristic(stateOne);
                     open.add(stateOne);
                 }
 
@@ -124,6 +130,7 @@ public class StateGenerator {
                 if(!close.contains(stateTwo) && !open.contains(stateTwo)){
                     numberManager.findNumber(stateTwo);
                     stateTwo.setPreviousState(currentState);
+                    heuristic.calculateHeuristic(stateTwo);
                     open.add(stateTwo);
                 }
             }
