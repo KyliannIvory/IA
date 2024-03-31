@@ -1,20 +1,23 @@
 package main;
 
-import java.util.Comparator;
-import java.util.TreeSet;
+import java.util.ArrayList;
 
 public class MyListSorted implements MyList{
 
-    private TreeSet<State> list;
+    private ArrayList<State> list;
+    private Sorter sorter;
 
 
     public MyListSorted(){
-        list = new TreeSet<>(Comparator.comparing(state -> state.getHeuristicValue()));
+        list = new ArrayList<>();
+        sorter = new Sorter();
     }
     @Override
     public void add(State state) {
-        if(!contains(state))
-            list.add(state);
+        if(!contains(state)){
+            int index = sorter.findGoodIndex(list,state);
+            list.add(index ,state);
+        }
     }
 
     @Override
@@ -38,25 +41,23 @@ public class MyListSorted implements MyList{
 
     @Override
     public State remove() {
-        return list.pollFirst();
+        return list.remove(0);
     }
 
     @Override
     public State getFirst() {
-        return list.first();
+        return list.get(0);
     }
 
     @Override
     public String toString(){
         StringBuilder sb = new StringBuilder();
         sb.append("(");
-        boolean first = true;
-        for (State state : list) {
-            if (!first) {
+        for (int i = 0; i < list.size(); i++) {
+            sb.append(list.get(i));
+            if (i < list.size() - 1) {
                 sb.append(" ; ");
             }
-            sb.append(state);
-            first = false;
         }
         sb.append(")");
         return sb.toString();

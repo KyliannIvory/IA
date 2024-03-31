@@ -4,28 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b5ca7cc-4627-4f6b-97e2-7754634ad1d1" name="Changes" comment="ecriture classe DifferenceQuantityHeuristic.java">
-      <change afterPath="$PROJECT_DIR$/src/src/main/MyList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/MyListFIFO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/MyListFILO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/MyListSorted.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="2b5ca7cc-4627-4f6b-97e2-7754634ad1d1" name="Changes" comment="le code est bon mais il faut remplacer TreeSet car il ne prends pas les valeur dupliquées. Et on va le faire en implementant un methode de tri rapide">
+      <change afterPath="$PROJECT_DIR$/src/src/main/Sorter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/src/main/instance.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/src/main/instance.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/main/Algorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/main/Algorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/main/Bucket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/main/Bucket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/main/Close.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/main/Close.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/main/DifferenceQuantityHeuristic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/main/DifferenceQuantityHeuristic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/main/Heuristic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/main/Heuristic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/main/Algorithm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/src/main/Algorithm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/main/DifferenceQuantityHeuristic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/src/main/DifferenceQuantityHeuristic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/src/main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/main/MyListSorted.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/src/main/MyListSorted.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/main/OpenSorted.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/src/main/OpenSorted.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/main/OpenStack.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/src/main/OpenStack.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/main/StateGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/src/main/StateGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/tests/TestStateGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/src/tests/TestStateGenerator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/main/Open.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/main/Open.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/main/OpenQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/main/OpenQueue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/main/OpenSorted.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/main/OpenSorted.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/main/OpenStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/main/OpenStack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/main/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/main/State.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/main/StateGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/main/StateGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/main/instance.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/main/instance.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/tests/TestStateGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/tests/TestStateGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/main/MyListSorted.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/main/MyListSorted.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +62,8 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Application.Main.executor": "Run",
+    "Application.QuickSort.executor": "Run",
+    "Application.Sorter.executor": "Run",
     "Application.StateGenerator.executor": "Run",
     "Application.main.Main.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
@@ -112,33 +105,28 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="TestController" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="QuickSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.QuickSort" />
       <module name="src" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.*" />
+          <option name="PATTERN" value="main.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.TestController" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestNumberManager.testFindNumber" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Sorter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.Sorter" />
       <module name="src" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.*" />
+          <option name="PATTERN" value="main.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.TestNumberManager" />
-      <option name="METHOD_NAME" value="testFindNumber" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -193,11 +181,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestController" />
+        <item itemvalue="Application.Sorter" />
+        <item itemvalue="Application.QuickSort" />
         <item itemvalue="JUnit.TestStateGenerator.testGenerateState" />
         <item itemvalue="JUnit.TestStateGenerator.testGenerateByEmptying" />
         <item itemvalue="JUnit.TestState.TestCopyConstructorState" />
-        <item itemvalue="JUnit.TestNumberManager.testFindNumber" />
       </list>
     </recent_temporary>
   </component>

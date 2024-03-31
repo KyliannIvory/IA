@@ -34,7 +34,7 @@ public class Main {
 
 
 
-        Open open = new OpenStack();
+        Open open = new OpenSorted();
         Algorithm algorithm = new Algorithm(finalState,open, heuristic);
         algorithm.run(initialState);
 
