@@ -9,7 +9,7 @@ public class Close {
     }
 
     public boolean contains(State state){
-        for( State s : list){
+        for (State s : list){
             if(s.equals(state))
                 return true;
         }

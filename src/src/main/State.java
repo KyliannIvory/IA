@@ -1,11 +1,10 @@
 package main;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class State implements Observer{
 
-    private int sizeMax;
+    private final int sizeMax;
     private List<Bucket> bucketList;
     private int heuristicValue;
     private List<Integer> stateContent;
@@ -39,15 +38,10 @@ public class State implements Observer{
     public int getSizeMax() {
         return sizeMax;
     }
-    public void setSizeMax(int sizeMax) {
-        this.sizeMax = sizeMax;
-    }
-
 
     public List<Bucket> getBucketList() {
         return bucketList;
     }
-
 
     public int getHeuristicValue() {
         return heuristicValue;
@@ -73,12 +67,11 @@ public class State implements Observer{
         if (sizeMax != state.sizeMax) return false; // Vérifier si sizeMax est différent
         if (stateContent.size() != state.stateContent.size()) return false; // Vérifier si les listes ont la même taille
         for (int i = 0; i < stateContent.size(); i++) {
-            if (!stateContent.get(i).equals(state.stateContent.get(i))) { // Vérifier chaque élément de stateContent
-                return false;
-            }
+            if (!stateContent.get(i).equals(state.stateContent.get(i))) return false ; // Vérifier chaque élément de stateContent
         }
         return true;
     }
+
     public void setPreviousState(State previousState) {
         this.previousState = previousState;
     }
@@ -87,7 +80,6 @@ public class State implements Observer{
     public void updateStateContent(Bucket bucket) {
          int index = bucketList.indexOf(bucket);
          stateContent.set(index,bucket.getCurrentQuantity());
-
     }
 
     public void showSolution() {
@@ -97,8 +89,7 @@ public class State implements Observer{
 
     public void drawBranch() {
         if (previousState == null) {
-            System.out.println("On commence ici");
-            System.out.println();
+            System.out.println("On commence ici \n \n");
             return;
         }
         previousState.drawBranch();
@@ -106,7 +97,6 @@ public class State implements Observer{
         System.out.println("  |");
         System.out.println("  v");
     }
-
 }
 
 

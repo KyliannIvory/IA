@@ -29,9 +29,13 @@ public class Main {
         numberManager.findNumber(finalState);
 
 
+        Heuristic heuristic = new DifferenceQuantityHeuristic(finalState);
+        heuristic.calculateHeuristicValue(initialState);
 
-        Open open = new OpenQueue();
-        Algorithm algorithm = new Algorithm(finalState,open);
+
+
+        Open open = new OpenStack();
+        Algorithm algorithm = new Algorithm(finalState,open, heuristic);
         algorithm.run(initialState);
 
 

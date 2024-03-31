@@ -1,7 +1,7 @@
 package main;
 
 import java.util.ArrayList;
-import java.util.List;
+
 
 public class Bucket implements Observable {
 
@@ -51,7 +51,7 @@ public class Bucket implements Observable {
                 destination.fill();
             }
         }
-        notifyAllObserver();
+        this.notifyAllObserver();
         destination.notifyAllObserver();
     }
 

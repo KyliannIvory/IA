@@ -3,14 +3,15 @@ package main;
 
 public class StateGenerator {
 
-    private Controller controller ;
-     private NumberManager numberManager;
+    private final Controller controller ;
+    private final NumberManager numberManager;
+    private final Heuristic heuristic;
 
 
-
-    public StateGenerator(Controller controller){
-        this.controller = controller;
+    public StateGenerator( Heuristic heuristic){
+        this.controller = new Controller();
         this.numberManager = new NumberManager();
+        this.heuristic = heuristic;
     }
 
     public void generateState(State currentState, Open open , Close close){
@@ -47,6 +48,7 @@ public class StateGenerator {
                 if(!close.contains(newState) && !open.contains(newState)){
                     numberManager.findNumber(newState);
                     newState.setPreviousState(currentState);
+                    heuristic.calculateHeuristicValue(newState);
                     open.add(newState);
                 }
 
@@ -80,6 +82,7 @@ public class StateGenerator {
                 if(!close.contains(newState) && !open.contains(newState)){
                     numberManager.findNumber(newState);
                     newState.setPreviousState(currentState);
+                    heuristic.calculateHeuristicValue(newState);
                     open.add(newState);
                 }
 
@@ -112,6 +115,7 @@ public class StateGenerator {
                 if(!close.contains(stateOne) && !open.contains(stateOne)){
                     numberManager.findNumber(stateOne);
                     stateOne.setPreviousState(currentState);
+                    heuristic.calculateHeuristicValue(stateOne);
                     open.add(stateOne);
                 }
 
@@ -124,6 +128,7 @@ public class StateGenerator {
                 if(!close.contains(stateTwo) && !open.contains(stateTwo)){
                     numberManager.findNumber(stateTwo);
                     stateTwo.setPreviousState(currentState);
+                    heuristic.calculateHeuristicValue(stateTwo);
                     open.add(stateTwo);
                 }
             }
