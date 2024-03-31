@@ -4,19 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b5ca7cc-4627-4f6b-97e2-7754634ad1d1" name="Changes" comment="le code est bon mais il faut remplacer TreeSet car il ne prends pas les valeur dupliquées. Et on va le faire en implementant un methode de tri rapide">
-      <change afterPath="$PROJECT_DIR$/src/src/main/Sorter.java" afterDir="false" />
+    <list default="true" id="2b5ca7cc-4627-4f6b-97e2-7754634ad1d1" name="Changes" comment="Tout est bon pour le code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/src/main/Algorithm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/src/main/Algorithm.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/src/main/DifferenceQuantityHeuristic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/src/main/DifferenceQuantityHeuristic.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/src/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/src/main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/src/main/MyListSorted.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/src/main/MyListSorted.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/src/main/OpenSorted.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/src/main/OpenSorted.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/src/main/OpenStack.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/src/main/OpenStack.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/src/main/StateGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/src/main/StateGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/src/tests/TestStateGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/src/tests/TestStateGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/main/DifferenceQuantityHeuristic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/main/DifferenceQuantityHeuristic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/main/FirstHeuristic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/main/ThirdHeuristic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/main/MyListSorted.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/main/MyListSorted.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/main/SecondHeu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/main/SecondHeu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/main/Sorter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/main/Sorter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/main/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/main/State.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/main/instance.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/main/instance.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,43 +56,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.Main.executor": "Run",
-    "Application.QuickSort.executor": "Run",
-    "Application.Sorter.executor": "Run",
-    "Application.StateGenerator.executor": "Run",
-    "Application.main.Main.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "false",
-    "JUnit.All in src.executor": "Run",
-    "JUnit.TestBucket.executor": "Run",
-    "JUnit.TestBucket.isEmpty.executor": "Run",
-    "JUnit.TestBucket.testEmpty.executor": "Run",
-    "JUnit.TestBucket.testFill.executor": "Run",
-    "JUnit.TestBucket.testIsFull.executor": "Run",
-    "JUnit.TestController.executor": "Run",
-    "JUnit.TestController.testAbleToFill.executor": "Run",
-    "JUnit.TestNumberManager.testFindNumber.executor": "Run",
-    "JUnit.TestState.TestCopyConstructorState.executor": "Run",
-    "JUnit.TestState.executor": "Run",
-    "JUnit.TestState.testEquals.executor": "Run",
-    "JUnit.TestStateGenerator.executor": "Run",
-    "JUnit.TestStateGenerator.testGenerateByEmptying.executor": "Run",
-    "JUnit.TestStateGenerator.testGenerateState.executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "create.test.in.the.same.root": "true",
-    "git-widget-placeholder": "moreSOLID",
-    "jdk.selected.JAVA_MODULE": "19",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.QuickSort.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Sorter.executor&quot;: &quot;Run&quot;,
+    &quot;Application.StateGenerator.executor&quot;: &quot;Run&quot;,
+    &quot;Application.main.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;JUnit.All in src.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestBucket.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestBucket.isEmpty.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestBucket.testEmpty.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestBucket.testFill.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestBucket.testIsFull.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestController.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestController.testAbleToFill.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestNumberManager.testFindNumber.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestState.TestCopyConstructorState.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestState.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestState.testEquals.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestStateGenerator.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestStateGenerator.testGenerateByEmptying.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestStateGenerator.testGenerateState.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />

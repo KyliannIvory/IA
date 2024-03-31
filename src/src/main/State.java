@@ -90,6 +90,7 @@ public class State implements Observer{
     public void drawBranch() {
         if (previousState == null) {
             System.out.println("On commence ici \n \n");
+
             return;
         }
         previousState.drawBranch();

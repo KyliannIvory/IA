@@ -17,6 +17,6 @@ public class DifferenceQuantityHeuristic implements Heuristic{
         for(Integer i : currentState.getStateContent()){
             sumInCurrentState += i;
         }
-        currentState.setHeuristicValue(sumInCurrentState - sumInFinalState);
+        currentState.setHeuristicValue(Math.abs(sumInCurrentState - sumInFinalState));
     }
 }

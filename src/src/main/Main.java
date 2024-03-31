@@ -29,7 +29,7 @@ public class Main {
         numberManager.findNumber(finalState);
 
 
-        Heuristic heuristic = new DifferenceQuantityHeuristic(finalState);
+        Heuristic heuristic = new ThirdHeuristic(finalState);
         heuristic.calculateHeuristicValue(initialState);
 
 
@@ -37,8 +37,5 @@ public class Main {
         Open open = new OpenSorted();
         Algorithm algorithm = new Algorithm(finalState,open, heuristic);
         algorithm.run(initialState);
-
-
-        // todo : il y a un probleme avec les int... il faut fixer ce probleme !!
     }
 }
