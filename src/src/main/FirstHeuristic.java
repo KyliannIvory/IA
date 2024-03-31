@@ -1,10 +1,10 @@
 package main;
 
-public class DifferenceQuantityHeuristic implements Heuristic{
+public class FirstHeuristic implements Heuristic{
 
     private final State finalState;
 
-    public DifferenceQuantityHeuristic(State finalState){
+    public FirstHeuristic(State finalState){
         this.finalState = finalState;
     }
     @Override

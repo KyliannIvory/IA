@@ -1,9 +1,9 @@
 package main;
 
-public class SecondHeu implements Heuristic{
+public class SecondHeuristic implements Heuristic{
     private State finalState;
 
-    public SecondHeu(State state){
+    public SecondHeuristic(State state){
         finalState = state;
     }
     @Override

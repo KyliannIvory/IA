@@ -2,7 +2,6 @@ package tests;
 
 import main.*;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 
 public class TestStateGenerator {
 
@@ -13,7 +12,7 @@ public class TestStateGenerator {
         Close close = new Close();
         state.addBucket(new Bucket(3,0));
         state.addBucket(new Bucket(5,0));
-        StateGenerator generator = new StateGenerator(new DifferenceQuantityHeuristic(state)); // c'est faux hinnnn
+        StateGenerator generator = new StateGenerator(new FirstHeuristic(state)); // c'est faux hinnnn
         generator.generateState(state,open,close);
         open.print();
         System.out.println();
