@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b5ca7cc-4627-4f6b-97e2-7754634ad1d1" name="Changes" comment="Tout est bon pour le code">
+    <list default="true" id="2b5ca7cc-4627-4f6b-97e2-7754634ad1d1" name="Changes" comment="les noms ont été changé">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/src/main/DifferenceQuantityHeuristic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/src/main/DifferenceQuantityHeuristic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/src/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/src/main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/main/DifferenceQuantityHeuristic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/main/DifferenceQuantityHeuristic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/main/FirstHeuristic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/main/ThirdHeuristic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/main/Algorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/main/Algorithm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/main/SecondHeu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/main/SecondHeu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/main/Sorter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/main/Sorter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/src/main/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/main/State.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/src/main/instance.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/main/instance.txt" afterDir="false" />
     </list>
@@ -281,7 +276,23 @@
       <option name="project" value="LOCAL" />
       <updated>1708895009012</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Okayyyyy">
+      <option name="closed" value="true" />
+      <created>1711900966161</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1711900966161</updated>
+    </task>
+    <task id="LOCAL-00012" summary="les noms ont été changé">
+      <option name="closed" value="true" />
+      <created>1711901834240</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1711901834240</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -307,6 +318,8 @@
     <MESSAGE value="L'algo fonctionne bien ... maintenant il faudrait passer à l'heuristique..." />
     <MESSAGE value="Interface Heuristic créé. Maintenant il faut ecrire des Classe qui vont implementer cette interface et proposer leurs propre heuristique" />
     <MESSAGE value="Juste un maj pour la methode de l'interface Heuristic.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Juste un maj pour la methode de l'interface Heuristic.java" />
+    <MESSAGE value="Okayyyyy" />
+    <MESSAGE value="les noms ont été changé" />
+    <option name="LAST_COMMIT_MESSAGE" value="les noms ont été changé" />
   </component>
 </project>

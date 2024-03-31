@@ -28,14 +28,22 @@ public class Main {
         }
         numberManager.findNumber(finalState);
 
-
+        //choisir la classe Heuristique
         Heuristic heuristic = new ThirdHeuristic(finalState);
         heuristic.calculateHeuristicValue(initialState);
 
 
-
+        //choisir la structure de Ouvert
         Open open = new OpenSorted();
         Algorithm algorithm = new Algorithm(finalState,open, heuristic);
+
+        long startTime = System.currentTimeMillis();
+
         algorithm.run(initialState);
+
+        long endTime = System.currentTimeMillis();
+        long timeExecution = (endTime - startTime);
+
+        System.out.println("Le temps d'execution est " + timeExecution + " millisecondes");
     }
 }

@@ -82,18 +82,20 @@ public class State implements Observer{
          stateContent.set(index,bucket.getCurrentQuantity());
     }
 
-    public void showSolution() {
-        drawBranch();
+    public void showSolution(State initialState) {
+        drawBranch(initialState);
         System.out.println("VOILÀ :)");
     }
 
-    public void drawBranch() {
+    public void drawBranch(State initalState) {
         if (previousState == null) {
             System.out.println("On commence ici \n \n");
-
+            System.out.println(initalState);
+            System.out.println("  |");
+            System.out.println("  v");
             return;
         }
-        previousState.drawBranch();
+        previousState.drawBranch(initalState);
         System.out.println(this);
         System.out.println("  |");
         System.out.println("  v");

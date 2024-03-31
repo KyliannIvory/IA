@@ -27,7 +27,7 @@ public class Algorithm {
             System.out.println("il n'existe pas de but accessible");
         else{
             System.out.println("il existe bien une solution");
-            open.getFirst().showSolution();
+            open.getFirst().showSolution(initialState);
         }
     }
 }
